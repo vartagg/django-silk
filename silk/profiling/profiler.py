@@ -124,6 +124,8 @@ class silk_profile(object):
 
     def _silk_installed(self):
         app_installed = 'silk' in settings.INSTALLED_APPS
+        return app_installed
+
         middlewares = getattr(settings, 'MIDDLEWARE', [])
         if not middlewares:
             middlewares = []
